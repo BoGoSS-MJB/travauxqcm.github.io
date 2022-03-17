@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture générale</title>
+    <script src="jquery-min.js"></script>
+    <script>
+        $(()=>{
+            $("#s1").click(function(){
+                $("#sl1").toggle(1000, function(){
+                });
+            });
+            $("#s2").click(function(){
+                $("#sl2").toggle(1000, function(){
+                });
+            });
+            $("#s3").click(function(){
+                $("#sl3").toggle(1000, function(){
+                });
+            });
+            $("#s4").click(function(){
+                $("#sl4").toggle(1000, function(){
+                });
+            });
+            $("#s5").click(function(){
+                $("#sl5").toggle(1000, function(){
+                });
+            });
+            $("#s6").click(function(){
+                $("#sl6").toggle(1000, function(){
+                });
+            });
+            $(".qcm1 input").click(function(){
+                $(".qcm1 input").prop('disabled', true);
+                $(".qcm1 .rep1").parent().css({"outline":"green solid 2px","backgroundColor":"#0080004f"})
+                if($(".qcm1 input").is(':checked').val() == "v"){
+                    alert("--------------------")//!!!!!!!!??????
+                }
+            })
+            $(".qcm2 input").click(function(){
+                $(".qcm2 input").prop('disabled', true);
+                $(".qcm2 .rep2").parent().css({"outline":"green solid 2px","backgroundColor":"#0080004f"})
+                if($(".qcm2 input").is(':checked').val() == "v"){
+                    alert("--------------------")//!!!!!!!!??????
+                }
+            })
+            $(".qcm3 input").click(function(){
+                $(".qcm3 input").prop('disabled', true);
+                $(".qcm3 .rep3").parent().css({"outline":"green solid 2px","backgroundColor":"#0080004f"})
+                if($(".qcm3 input").is(':checked').val() == "v"){
+                    alert("--------------------")//!!!!!!!!??????
+                }
+            })
+            $(".qcm4 input").click(function(){
+                $(".qcm4 input").prop('disabled', true);
+                $(".qcm4 .rep4").parent().css({"outline":"green solid 2px","backgroundColor":"#0080004f"})
+                if($(".qcm4 input").is(':checked').val() == "v"){
+                    alert("--------------------")//!!!!!!!!??????
+                }
+            })
+            $(".qcm5 input").click(function(){
+                $(".qcm5 input").prop('disabled', true);
+                $(".qcm5 .rep5").parent().css({"outline":"green solid 2px","backgroundColor":"#0080004f"})
+                if($(".qcm5 input").is(':checked').val() == "v"){
+                    alert("--------------------")//!!!!!!!!??????
+                }
+            })
+            $(".qcm6 input").click(function(){
+                $(".qcm6 input").prop('disabled', true);
+                $(".qcm6 .rep6").parent().css({"outline":"green solid 2px","backgroundColor":"#0080004f"})
+                if($(".qcm6 input").is(':checked').val() == "v"){
+                    alert("--------------------")//!!!!!!!!??????
+                }
+            })
+        })
+        setInterval(myTimer, 1000);
+            
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("time").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+    <style>
+        h4{
+            display: none;
+            color: green;
+            text-decoration: underline;
+        }
+        button{   
+            background: #1AAB8A;
+            color: #fff;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            transition: 800ms ease all;
+            outline: none;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 5px 16px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            width: 95%;
+            height: 36px;
+            padding-top: 5px;
+        }
+        li:nth-child(odd){
+            background-color: #838383;
+        }
+        .page{
+            display: flex;
+
+        }
+        h1{
+            font-size: 27px;
+        }
+        main{
+            margin: auto;
+            width: 85%;
+            height: 2200px;
+            margin-top: 100px;
+            border: black solid 2px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        header{
+            width: 100%;
+            height: 76px;
+            top: 0px;
+            left: 0px;
+            position: fixed;
+            display: flex;
+            background-color: #35353583;
+        }
+        .haxtag{
+            color: #838383;
+        }
+        .qcm{
+            border: 2px solid;
+            padding: 20px;
+            background-color: #83838394;
+        }
+        #time{
+            margin-left: 33px;
+            margin-top: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div id="time"></div>
+        </header>
+        <main>
+            <div class="qcm1">
+            <div class="qcm">
+                <h1><span class="haxtag">#1 :</span>Dans quel pays trouve-t-on la région du Hedjaz ? </h1>
+                <ul>
+                    <li><input type="radio" name="q1"> A- L'egypte .</li>
+                    <li><input type="radio" name="q1"> B- La libya .</li>
+                    <li><input type="radio" name="q1"> C- L'irak .</li>
+                    <li><input type="radio" name="q1" value="v" class="rep1"> D- L'arabie saoudite .</li>
+                </ul>
+                <h4 id="sl1"> Solution : L'arabie saoudite </h4>
+                <button id="s1">la solution....</button>
+            </div>
+            </div>
+            <div class="qcm2">
+            <div class="qcm">
+                <h1><span class="haxtag">#2 :</span>Quel est le plus grand lac d’Amérique du Nord ?</h1>
+                <ul>
+                    <li><input type="radio" name="q2"> A- Le lac huron .</li>
+                    <li><input type="radio" name="q2"> B- Le lac ontario .</li>
+                    <li><input type="radio" name="q2"> C- Le lac majeur .</li>
+                    <li><input type="radio" class="rep2" name="q2"> D- Le lac superieur .</li>
+                </ul>
+                <h4 id="sl2"> Solution : Le lac superieur . </h4>
+                <button id="s2">la solution....</button>
+            </div>
+            </div>
+            <div class="qcm3">
+            <div class="qcm">
+                <h1><span class="haxtag">#3 :</span>Parmi les États suivants, lequel n’est pas membre du Commonwealth ?</h1>
+                <ul>
+                    <li><input type="radio" name="q3"> A- Le ghana .</li>
+                    <li><input type="radio" name="q3"> B- L'inde .</li>
+                    <li><input type="radio" class="rep3" name="q3"> C- Les etets-unis .</li>
+                    <li><input type="radio" name="q3"> D- L'australie .</li>
+                </ul>
+                <h4 id="sl3"> Solution : Les etets-unis . </h4>
+                <button id="s3">la solution....</button>
+            </div>
+            </div>
+            <div class="qcm4">
+            <div class="qcm">
+                <h1><span class="haxtag">#4 :</span>Quelles sont les langues officielles de l’Afghanistan ?</h1>
+                <ul>
+                    <li><input type="radio" name="q4"> A- Hindi et persan .</li>
+                    <li><input type="radio" class="rep4" name="q4"> B- Persan et pashtou .</li>
+                    <li><input type="radio" name="q4"> C- Afghan et anglais .</li>
+                    <li><input type="radio" name="q4"> D- Arabe et turk .</li>
+                </ul>
+                <h4 id="sl4"> Solution : Persan et pashtou . </h4>
+                <button id="s4">la solution....</button>
+                
+            </div>
+            </div>
+            <div class="qcm5">
+            <div class="qcm">
+                <h1><span class="haxtag">#5 :</span>Quelle est la capitale de fait de la Suisse ?</h1>
+                <ul>
+                    <li><input type="radio" class="rep5" name="q5"> A- Berne .</li>
+                    <li><input type="radio" name="q5"> B- Bale .</li>
+                    <li><input type="radio" name="q5"> C- Lausanne .</li>
+                    <li><input type="radio" name="q5"> D- Zurich .</li>
+                </ul>
+                <h4 id="sl5"> Solution : Berne . </h4>
+                <button id="s5">la solution....</button>
+            </div>
+            </div>
+            <div class="qcm6">
+            <div class="qcm">
+                <h1><span class="haxtag">#6 :</span>Combien d’états fédérés l’Inde compte-t-elle ?</h1>
+                <ul>
+                    <li><input type="radio" name="q6"> A- 30 .</li>
+                    <li><input type="radio" class="rep6" name="q6"> B- 29 .</li>
+                    <li><input type="radio" name="q6"> C- 27 .</li>
+                    <li><input type="radio" name="q6"> D- 28 .</li>
+                </ul>
+                <h4 id="sl6"> Solution : 29 . </h4>
+                <button id="s6">la solution....</button>
+            </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
